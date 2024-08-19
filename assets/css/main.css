@@ -65,3 +65,20 @@ button {
 p {
     color: black;
 }
+
+
+.shin {
+    color: rgb(236, 29, 29);
+}
+
+.shou {
+    color: rgb(35, 35, 238);
+}
+
+#shinImg.hightlight {
+    border: 5px solid rgb(236, 29, 29);
+}
+
+#shouImg.hightlight {
+    border: 5px solid rgb(35, 35, 238);
+}
