@@ -53,25 +53,44 @@ function displayNextLine(){
 
 
         console.log(LINE.text);     
+        console.log(currentIndex);
+        
         currentIndex++;
      } else {
         document.querySelector("#nextBtn").style.display = "none";
         document.querySelector("#restartBtn").style.display = "inline-block";
-        currentIndex = 0;
      }
 
     // Changez les images
-     if(currentIndex == 3){
+     if(currentIndex <= 4 && currentIndex > 2){
         document.querySelector('#shinImg').src = "assets/img/shin2.webp";
         document.querySelector('#shouImg').src = "assets/img/shoubunkun.jpg";
-     }else if(currentIndex == 5){
+     }else if(currentIndex >= 4){
         document.querySelector('#shinImg').src = "assets/img/shin3.png";
+     } else if( currentIndex > 2) {
+        document.querySelector('#shinImg').src = "assets/img/shin1.webp";
+        document.querySelector('#shouImg').src = "assets/img/young-shoubounkun.webp";
      }
 
 }
 
 
+document.querySelector("#restartBtn").addEventListener('click', () => {
+    currentIndex = 0;
+    document.querySelector('#welcomeText').style.display = "block";
+    document.querySelector('#startBtn').style.display = "inline-block"
 
+    // afficher la boîte de dialogue 
+    document.querySelector('#dialogueBox').style.display = "none";
+
+    // afficher le boutton suivant
+    document.querySelector('#nextBtn').style.display = "none";
+
+    // afficher les images
+    document.querySelector('#shinImg').style.display = "none";
+    document.querySelector('#shouImg').style.display = "none";
+    document.querySelector("#restartBtn").style.display = "none";
+})
 
 
 
