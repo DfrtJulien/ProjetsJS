@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksans", 'sans-serif';
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+img {
+    height: 400px;
+    width: 25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
