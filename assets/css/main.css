@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: auto;
     box-sizing: border-box;
-    background-image: url(../img/pexels-francesco-ungaro-281260.jpg);
+    background-image: url(../img/pexels-robert-stokoe-105922-12379105.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Quicksans", 'sans-serif';
@@ -47,11 +47,10 @@ button {
     padding: 10px 20px;
     font-style: 16px;
     cursor: pointer;
-    background-color: rgb(66, 69, 235);
+    background-color: rgb(233, 92, 36);
     border: none;
     border-radius: 10px;
     color: white;
-    box-shadow: 5px 5px 5px rgb(109, 95, 233);
 }
 
 #nextBtn,
@@ -61,4 +60,8 @@ button {
 #shouImg,
 #dialogueBox {
     display: none;
+}
+
+p {
+    color: black;
 }
