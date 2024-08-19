@@ -51,23 +51,31 @@ function displayNextLine(){
         //Ajoutez le paragraphe dans la boite de dialogue
         DIALOGUE_BOX.appendChild(P);
 
-
-        console.log(LINE.text);     
-        console.log(currentIndex);
-        
+        let currentSpeaker = DIALOGUE[currentIndex].user;
+        console.log(currentSpeaker); 
         currentIndex++;
+
+        if(currentSpeaker === "shin"){
+            P.className = "shin";
+            document.querySelector('#shinImg').classList.add("hightlight")
+            document.querySelector('#shouImg').classList.remove("hightlight")
+        } else {
+            P.className = "shou";
+            document.querySelector('#shinImg').classList.remove("hightlight")
+            document.querySelector('#shouImg').classList.add("hightlight")
+        }
      } else {
         document.querySelector("#nextBtn").style.display = "none";
         document.querySelector("#restartBtn").style.display = "inline-block";
      }
 
     // Changez les images
-     if(currentIndex <= 4 && currentIndex > 2){
+     if(currentIndex === 4 || currentIndex === 3){
         document.querySelector('#shinImg').src = "assets/img/shin2.webp";
         document.querySelector('#shouImg').src = "assets/img/shoubunkun.jpg";
-     }else if(currentIndex >= 4){
+     }else if(currentIndex === 5 || currentIndex === 6){
         document.querySelector('#shinImg').src = "assets/img/shin3.png";
-     } else if( currentIndex > 2) {
+     } else if( currentIndex === 0 || currentIndex === 1) {
         document.querySelector('#shinImg').src = "assets/img/shin1.webp";
         document.querySelector('#shouImg').src = "assets/img/young-shoubounkun.webp";
      }
